@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Made Budi Darma Putra | Portfolio</title>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,10 +41,11 @@
 
     <!-- Theme Initialization Script (Prevent FOUC) -->
     <script>
-        if (localStorage.getItem('color-theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
+        // Dark mode jadi pilihan pertama; light hanya jika pengunjung memilihnya
+        if (localStorage.getItem('color-theme') === 'light') {
             document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
         }
     </script>
 
@@ -103,7 +104,7 @@
     <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-base-900/90 backdrop-blur-md border-b border-slate-200 dark:border-base-700/50 transition-colors duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight hover:text-accent-light dark:hover:text-accent transition-colors">
-                JD.
+                MP.
             </a>
             
             <div class="flex items-center gap-6">
@@ -142,14 +143,11 @@
                 <!-- Text Content -->
                 <div class="order-2 lg:order-1 text-center lg:text-left">
                     <p class="text-accent-light dark:text-accent font-medium mb-4 tracking-wide text-sm fade-in">Halo, saya</p>
-                    <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 tracking-tight mb-4 fade-in delay-1 transition-colors">
-                        John Doe.
+                    <h1 class="text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 tracking-tight mb-6 fade-in delay-1 transition-colors">
+                        Made Budi Darma Putra.
                     </h1>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-500 dark:text-slate-500 tracking-tight mb-6 fade-in delay-2 transition-colors">
-                        Saya membangun solusi digital presisi.
-                    </h2>
                     <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 fade-in delay-3 transition-colors max-w-xl mx-auto lg:mx-0">
-                        Saya seorang profesional yang berfokus pada pengembangan sistem dan antarmuka yang bersih serta efisien. Tanpa kerumitan yang tidak perlu, hanya hasil yang optimal.
+                        Fresh graduate S1 Sistem Informasi dengan pengalaman mengembangkan aplikasi Android (Kotlin), web (PHP), dan basis data (SQL). Siap berkontribusi di helpdesk TI, pengelolaan basis data, dan pengembangan aplikasi.
                     </p>
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 fade-in delay-3">
                         <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 border border-accent-light dark:border-accent text-accent-light dark:text-accent font-medium rounded-lg hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-light/20 dark:hover:shadow-accent/20 hover:bg-sky-50 dark:hover:bg-accent/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent">
@@ -190,7 +188,7 @@
                     <div class="h-px bg-slate-300 dark:bg-base-600 flex-grow max-w-[200px]"></div>
                 </div>
                 
-                <div class="space-y-14 border-l border-slate-300 dark:border-base-600 ml-3 pl-8 relative">
+                <div id="experience-list" class="space-y-14 border-l border-slate-300 dark:border-base-600 ml-3 pl-8 relative">
                     <!-- Item 1 -->
                     <div class="relative group">
                         <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white dark:bg-base-900 border-2 border-accent-light dark:border-accent transition-colors duration-300 group-hover:bg-accent-light dark:group-hover:bg-accent"></div>
@@ -281,7 +279,7 @@
                     <div class="flex items-center gap-4 mb-8">
                         <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">Pendidikan</h3>
                     </div>
-                    <div class="relative pl-6 border-l border-slate-300 dark:border-base-600 space-y-8">
+                    <div id="education-list" class="relative pl-6 border-l border-slate-300 dark:border-base-600 space-y-8">
                         <div class="relative">
                             <div class="absolute -left-[29px] top-1.5 h-3 w-3 rounded-full bg-accent-light dark:bg-accent shadow-[0_0_8px_rgba(56,189,248,0.5)]"></div>
                             <h4 class="text-lg font-semibold text-slate-800 dark:text-slate-200">Sarjana Ilmu Komputer</h4>
@@ -296,7 +294,7 @@
                     <div class="flex items-center gap-4 mb-8">
                         <h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">Sertifikasi & Pelatihan</h3>
                     </div>
-                    <ul class="space-y-4">
+                    <ul id="certifications-list" class="space-y-4">
                         <li class="flex items-start gap-3 p-3 rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-base-700 hover:bg-slate-50 dark:hover:bg-base-800 transition-all duration-300">
                             <svg class="w-6 h-6 text-accent-light dark:text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             <div>
@@ -324,7 +322,7 @@
                     <div class="h-px bg-slate-300 dark:bg-base-600 flex-grow max-w-[200px]"></div>
                 </div>
                 
-                <div class="flex flex-wrap gap-3">
+                <div id="skills-list" class="flex flex-wrap gap-3">
                     <!-- Pill Tags -->
                     <span class="px-5 py-2.5 rounded-full border border-slate-200 dark:border-base-700 bg-white dark:bg-base-800 text-slate-700 dark:text-slate-200 font-medium text-sm hover:border-accent-light dark:hover:border-accent hover:text-accent-light dark:hover:text-accent hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">JavaScript (ES6+)</span>
                     <span class="px-5 py-2.5 rounded-full border border-slate-200 dark:border-base-700 bg-white dark:bg-base-800 text-slate-700 dark:text-slate-200 font-medium text-sm hover:border-accent-light dark:hover:border-accent hover:text-accent-light dark:hover:text-accent hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">TypeScript</span>
@@ -366,7 +364,7 @@
     <!-- Footer -->
     <footer class="py-8 px-6 border-t border-slate-200 dark:border-base-700/50 bg-white dark:bg-transparent text-center text-slate-500 transition-colors duration-300">
         <p class="text-xs font-mono mb-2">Didesain & Dibangun minimalis. Tanpa basa-basi.</p>
-        <p class="text-xs">© 2026 John Doe.</p>
+        <p class="text-xs">© 2026 Made Budi Darma Putra.</p>
     </footer>
 
     <!-- Theme Toggle Logic -->
@@ -412,109 +410,175 @@
 
     <!-- Google Sheets Dynamic Fetch Script -->
     <script>
-        // Tempel URL Web App dari Apps Script (berakhiran /exec) di sini
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxokOJbdQZ6HOPp__yIpTHaBC2-TZiX16DkG_bIMTkdHOrSUsZw7kkEprPjajmfrHKYkg/exec';
+        // URL Web App dari Apps Script (berakhiran /exec)
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQGaVYprl5B2cl42OiX5rnXiY9bf0MwUhciuMDFAEYjqtfJBbSabCvcZDvoB_Vqzwz/exec';
         const isDummy = APPS_SCRIPT_URL.includes('PASTE_URL_WEB_APP');
 
+        // ---------- Helper ----------
         function escapeHTML(str) {
             return String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
         }
-
+        // Hanya izinkan http(s) atau anchor (#) agar tidak ada link berbahaya
+        function safeUrl(url) {
+            const u = String(url ?? '').trim();
+            return /^(https?:\/\/|#)/i.test(u) ? u : '#';
+        }
         function convertDriveLinkToDirectLink(url) {
             if (!url) return 'https://placehold.co/600x400/e2e8f0/64748b?text=Tidak+Ada+Gambar';
-            if (url.includes('drive.google.com/file/d/')) {
-                const match = url.match(/\/d\/(.*?)\//);
-                if (match && match[1]) {
-                    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w1000`;
-                }
-            }
+            const m = url.match(/drive\.google\.com\/file\/d\/([^/?#]+)/) || url.match(/drive\.google\.com\/(?:open|uc)\?[^#]*id=([^&#]+)/);
+            if (m && m[1]) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w1000`;
             return url;
         }
+        // Pisahkan isi sel menjadi baris (Alt+Enter di Google Sheets)
+        function splitLines(v) {
+            return String(v ?? '').split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+        }
+        const val = (r, k) => String(r[k] ?? '').trim();
 
-        function normalizeRows(rows) {
-            return rows.map(r => ({
-                title: (r.title || 'Untitled').toString().trim(),
-                description: (r.description || '').toString().trim(),
-                imageUrl: (r.imageUrl || '').toString().trim(),
-                docLink: (r.docLink || '#').toString().trim()
-            }));
+        const FILE_ICON = '<svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>';
+        const CHECK_ICON = '<svg class="w-6 h-6 text-accent-light dark:text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>';
+
+        // ---------- Pengalaman ----------
+        function renderExperience(rows) {
+            const box = document.getElementById('experience-list');
+            if (!box || !rows.length) return;
+            box.innerHTML = rows.map((r, i) => {
+                const dot = i === 0
+                    ? 'border-accent-light dark:border-accent group-hover:bg-accent-light dark:group-hover:bg-accent'
+                    : 'border-slate-400 dark:border-slate-600 group-hover:border-accent-light dark:group-hover:border-accent';
+                const org = val(r, 'organization');
+                const highlights = splitLines(r.highlights).map(h => `<li>${escapeHTML(h)}</li>`).join('');
+                const images = splitLines(r.images).map(u => `
+                    <a href="${escapeHTML(safeUrl(u))}" target="_blank" rel="noopener noreferrer" class="block hover:-translate-y-1 hover:shadow-md transition-all duration-300 rounded-md">
+                        <img src="${escapeHTML(convertDriveLinkToDirectLink(safeUrl(u)))}" alt="Lampiran" loading="lazy" class="h-16 w-24 object-cover rounded-md border border-slate-300 dark:border-base-600" onerror="this.src='https://placehold.co/150x100/e2e8f0/64748b?text=Eror'">
+                    </a>`).join('');
+                const docs = splitLines(r.documents).map(line => {
+                    const idx = line.indexOf('|');
+                    const name = idx > -1 ? line.slice(0, idx).trim() : 'Dokumen';
+                    const url = idx > -1 ? line.slice(idx + 1).trim() : line;
+                    return `
+                    <a href="${escapeHTML(safeUrl(url))}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 bg-slate-50 dark:bg-base-900 border border-slate-300 dark:border-base-600 rounded-md text-sm font-medium text-slate-700 dark:text-slate-300 hover:border-accent-light dark:hover:border-accent hover:text-accent-light dark:hover:text-accent hover:-translate-y-1 hover:shadow-md transition-all duration-300 h-16">
+                        ${FILE_ICON}<span>${escapeHTML(name)}</span>
+                    </a>`;
+                }).join('');
+                return `
+                <div class="relative group">
+                    <div class="absolute -left-[41px] top-1 h-4 w-4 rounded-full bg-white dark:bg-base-900 border-2 ${dot} transition-colors duration-300"></div>
+                    <h4 class="text-xl font-semibold text-slate-900 dark:text-slate-100">${escapeHTML(val(r,'role'))}${org ? ` <span class="text-accent-light dark:text-accent">@ ${escapeHTML(org)}</span>` : ''}</h4>
+                    <p class="text-sm font-mono text-slate-500 dark:text-slate-400 mt-1 mb-4">${escapeHTML(val(r,'period'))}</p>
+                    ${highlights ? `<ul class="list-disc list-inside text-slate-700 dark:text-slate-400 space-y-2 text-sm md:text-base mb-4">${highlights}</ul>` : ''}
+                    ${(images || docs) ? `<div class="flex flex-wrap gap-3 mt-4">${images}${docs}</div>` : ''}
+                </div>`;
+            }).join('');
         }
 
+        // ---------- Pendidikan ----------
+        function renderEducation(rows) {
+            const box = document.getElementById('education-list');
+            if (!box || !rows.length) return;
+            box.innerHTML = rows.map(r => {
+                const meta = [val(r,'period'), val(r,'note')].filter(Boolean).join(' • ');
+                return `
+                <div class="relative">
+                    <div class="absolute -left-[29px] top-1.5 h-3 w-3 rounded-full bg-accent-light dark:bg-accent shadow-[0_0_8px_rgba(56,189,248,0.5)]"></div>
+                    <h4 class="text-lg font-semibold text-slate-800 dark:text-slate-200">${escapeHTML(val(r,'degree'))}</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">${escapeHTML(val(r,'institution'))}</p>
+                    ${meta ? `<p class="text-slate-500 text-xs font-mono mt-1">${escapeHTML(meta)}</p>` : ''}
+                </div>`;
+            }).join('');
+        }
+
+        // ---------- Sertifikasi ----------
+        function renderCertifications(rows) {
+            const box = document.getElementById('certifications-list');
+            if (!box || !rows.length) return;
+            box.innerHTML = rows.map(r => {
+                const meta = [val(r,'issuer'), val(r,'year')].filter(Boolean).join(' • ');
+                const link = val(r,'link');
+                const inner = `
+                    ${CHECK_ICON}
+                    <div>
+                        <h4 class="text-slate-800 dark:text-slate-200 font-medium">${escapeHTML(val(r,'name'))}</h4>
+                        <p class="text-slate-500 text-xs font-mono">${escapeHTML(meta)}</p>
+                    </div>`;
+                const cls = 'flex items-start gap-3 p-3 rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-base-700 hover:bg-slate-50 dark:hover:bg-base-800 transition-all duration-300';
+                return link
+                    ? `<li><a href="${escapeHTML(safeUrl(link))}" target="_blank" rel="noopener noreferrer" class="${cls}">${inner}</a></li>`
+                    : `<li class="${cls}">${inner}</li>`;
+            }).join('');
+        }
+
+        // ---------- Keahlian ----------
+        function renderSkills(rows) {
+            const box = document.getElementById('skills-list');
+            if (!box || !rows.length) return;
+            box.innerHTML = rows.map(r => `<span class="px-5 py-2.5 rounded-full border border-slate-200 dark:border-base-700 bg-white dark:bg-base-800 text-slate-700 dark:text-slate-200 font-medium text-sm hover:border-accent-light dark:hover:border-accent hover:text-accent-light dark:hover:text-accent hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">${escapeHTML(val(r,'skill'))}</span>`).join('');
+        }
+
+        // ---------- Portofolio Dinamis ----------
         const dummyData = [
-            {
-                title: "Sistem Manajemen Dokumen",
-                description: "Sistem pengarsipan file terenkripsi untuk organisasi kampus. Dibangun menggunakan React.",
-                imageUrl: "https://placehold.co/600x400/0ea5e9/ffffff?text=Pratinjau+Aplikasi+1",
-                docLink: "#"
-            },
-            {
-                title: "Situs Web E-Commerce UMKM",
-                description: "Platform lokapasar untuk produk lokal. Menggunakan stack Node.js dan Tailwind CSS.",
-                imageUrl: "https://placehold.co/600x400/3b82f6/ffffff?text=Pratinjau+Aplikasi+2",
-                docLink: "#"
-            },
-            {
-                title: "Sertifikat Lomba UI/UX",
-                description: "Juara 1 Lomba Desain Antarmuka Nasional 2024. Klik dokumen untuk melihat PDF.",
-                imageUrl: "https://placehold.co/600x400/64748b/ffffff?text=Sertifikat",
-                docLink: "#"
-            }
+            { title: "Sistem Manajemen Dokumen", description: "Sistem pengarsipan file terenkripsi untuk organisasi kampus. Dibangun menggunakan React.", imageUrl: "https://placehold.co/600x400/0ea5e9/ffffff?text=Pratinjau+Aplikasi+1", docLink: "#" },
+            { title: "Situs Web E-Commerce UMKM", description: "Platform lokapasar untuk produk lokal. Menggunakan stack Node.js dan Tailwind CSS.", imageUrl: "https://placehold.co/600x400/3b82f6/ffffff?text=Pratinjau+Aplikasi+2", docLink: "#" },
+            { title: "Sertifikat Lomba UI/UX", description: "Juara 1 Lomba Desain Antarmuka Nasional 2024. Klik dokumen untuk melihat PDF.", imageUrl: "https://placehold.co/600x400/64748b/ffffff?text=Sertifikat", docLink: "#" }
         ];
 
-        async function initDynamicPortfolio() {
+        function renderPortfolio(rows) {
             const container = document.getElementById('gsheet-container');
-            try {
-                let data = [];
-                if (isDummy) {
-                    data = dummyData;
-                } else {
-                    const response = await fetch(APPS_SCRIPT_URL);
-                    if(!response.ok) throw new Error("Failed to fetch data from Apps Script.");
-                    const json = await response.json();
-                    if (json.error) throw new Error(json.error);
-                    data = normalizeRows(json);
-                }
-
-                container.innerHTML = '';
-                if (data.length === 0) {
-                    container.innerHTML = `<p class="col-span-full text-slate-500">Data portofolio tidak ditemukan.</p>`;
-                    return;
-                }
-
-                data.forEach(item => {
-                    const imgUrl = convertDriveLinkToDirectLink(item.imageUrl);
-                    const linkText = item.docLink && item.docLink !== '#' ? 'Lihat Dokumen' : 'Tautan tidak tersedia';
-                    const isLinkDisabled = !item.docLink || item.docLink === '#';
-
-                    const cardHTML = `
-                        <div class="group bg-white dark:bg-base-800 border border-slate-200 dark:border-base-700 rounded-xl overflow-hidden flex flex-col hover:border-slate-300 dark:hover:border-base-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
-                            <div class="h-48 w-full bg-slate-100 dark:bg-base-900 overflow-hidden">
-                                <img src="${escapeHTML(imgUrl)}" alt="${escapeHTML(item.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Gambar+Eror'">
-                            </div>
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-accent-light dark:group-hover:text-accent transition-colors">${escapeHTML(item.title)}</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">${escapeHTML(item.description)}</p>
-                                <a href="${escapeHTML(item.docLink)}" target="_blank" rel="noopener noreferrer" 
-                                   class="inline-flex items-center gap-2 text-sm font-medium ${isLinkDisabled ? 'text-slate-400 dark:text-slate-600 pointer-events-none' : 'text-accent-light dark:text-accent hover:text-sky-700 dark:hover:text-white'} transition-colors mt-auto">
-                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                    ${linkText}
-                                </a>
-                            </div>
+            container.innerHTML = '';
+            if (!rows.length) {
+                container.innerHTML = `<p class="col-span-full text-slate-500">Data portofolio tidak ditemukan.</p>`;
+                return;
+            }
+            rows.forEach(item => {
+                const docLink = safeUrl(val(item, 'docLink') || '#');
+                const imgUrl = convertDriveLinkToDirectLink(safeUrl(val(item, 'imageUrl')) === '#' ? '' : val(item, 'imageUrl'));
+                const isLinkDisabled = docLink === '#';
+                const linkText = isLinkDisabled ? 'Tautan tidak tersedia' : 'Lihat Dokumen';
+                container.insertAdjacentHTML('beforeend', `
+                    <div class="group bg-white dark:bg-base-800 border border-slate-200 dark:border-base-700 rounded-xl overflow-hidden flex flex-col hover:border-slate-300 dark:hover:border-base-600 hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="h-48 w-full bg-slate-100 dark:bg-base-900 overflow-hidden">
+                            <img src="${escapeHTML(imgUrl)}" alt="${escapeHTML(val(item,'title'))}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Gambar+Eror'">
                         </div>
-                    `;
-                    container.insertAdjacentHTML('beforeend', cardHTML);
-                });
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2 group-hover:text-accent-light dark:group-hover:text-accent transition-colors">${escapeHTML(val(item,'title') || 'Untitled')}</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">${escapeHTML(val(item,'description'))}</p>
+                            <a href="${escapeHTML(docLink)}" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-2 text-sm font-medium ${isLinkDisabled ? 'text-slate-400 dark:text-slate-600 pointer-events-none' : 'text-accent-light dark:text-accent hover:text-sky-700 dark:hover:text-white'} transition-colors mt-auto">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                ${linkText}
+                            </a>
+                        </div>
+                    </div>`);
+            });
+        }
+
+        // ---------- Ambil semua data sekali jalan ----------
+        async function initSiteData() {
+            if (isDummy) { renderPortfolio(dummyData); return; }
+            try {
+                const response = await fetch(APPS_SCRIPT_URL);
+                if (!response.ok) throw new Error('Gagal mengambil data dari Apps Script.');
+                const json = await response.json();
+                if (json.error) throw new Error(json.error);
+
+                // Kompatibel dengan format lama (array = hanya portofolio)
+                const data = Array.isArray(json) ? { portfolio: json } : json;
+
+                renderPortfolio(data.portfolio || []);
+                // Bagian lain: jika sheet kosong/tidak ada, isi bawaan di HTML tetap dipakai
+                renderExperience(data.experience || []);
+                renderEducation(data.education || []);
+                renderCertifications(data.certifications || []);
+                renderSkills(data.skills || []);
             } catch (error) {
-                container.innerHTML = `
+                console.error(error);
+                document.getElementById('gsheet-container').innerHTML = `
                     <div class="col-span-full p-6 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/50 rounded-lg text-center">
                         <p class="text-red-600 dark:text-red-400 font-medium">Terjadi kesalahan saat memuat data.</p>
-                    </div>
-                `;
+                    </div>`;
             }
         }
-        window.addEventListener('DOMContentLoaded', initDynamicPortfolio);
+        window.addEventListener('DOMContentLoaded', initSiteData);
     </script>
 
     <!-- Scroll Reveal (Intersection Observer) Script -->
